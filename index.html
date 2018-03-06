@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy data validation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<form action="" id="myform" class="weValidForm">
+    <input type="text" placeholder="E-mail" value="" class="required weEmail">
+    <input type="text" placeholder="Firstname" value="" class="required">
+    <input type="submit" name="">
+</form>
+
+<!--load js-->
+<script src="js/simpleValid.js"></script>
+<script>
+    $("input[type='submit']").on('click', function (e) {
+        e.preventDefault();
+        if (simpleValid.init(e)) {
+            alert('Submit');
+        }
+    });
+</script>
+</body>
+</html>
